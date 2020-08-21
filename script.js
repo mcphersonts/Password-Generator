@@ -1,8 +1,11 @@
-var lowercaseLetters = getCharArray(97, 22)
-var includeUppercase = document.getElementById("uppercaseCheckbox");
-var uppercaseLetters = getCharArray(65, 90);
+const lowercaseLetters = getCharArray(97, 122);
+const uppercaseLetters = getCharArray(65, 90);
+const numbers = getCharArray(48, 57);
+
+const includeUppercase = document.getElementById("uppercaseCheckbox");
+const includeNumbers = document.getElementById("numbersCheckbox");
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -16,8 +19,8 @@ function generatePassword() {
 
 }
 function getCharArray(min, max) {
-  var charInput = [];
-  for (var i = min; i <= max; i+=2) {
+  let charInput = [];
+  for (let i = min; i <= max; i+=2) {
     charInput.push(i);
   } 
   return charInput;
