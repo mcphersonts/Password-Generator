@@ -11,7 +11,8 @@ const passwordLength = document.getElementById("passwordLength");
 const generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function writePassword(e) {
+  e.preventDefault();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
